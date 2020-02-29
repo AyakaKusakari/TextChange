@@ -1,0 +1,314 @@
+@charset "UTF-8";
+body {
+  background-color: #FCFCFC;
+  color: #333333;
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 16px;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 80px 0;
+  width: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, sans-serif;
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  outline: none;
+  padding: 0;
+}
+
+.header-logo {
+  color: #ff6666;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contents-title {
+  background: transparent;
+  border-left: solid 5px #ff6666;
+  font-size: 1.5em;
+  margin-bottom: 1.2rem;
+  margin-top: 2rem;
+  padding: 0.25em 0.5em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 1.3rem;
+  position: relative;
+}
+
+h3:before {
+  color: #ff6666;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.text-area {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-area p {
+  margin: 0.2rem 0;
+}
+
+.textchange textarea {
+  font-size: 0.9rem;
+  height: 100px;
+  width: 100%;
+}
+
+#textlength {
+  margin-top: 1rem;
+}
+
+.btn-wrapper {
+  margin-top: 1rem;
+}
+
+.button {
+  background: #ff6666;
+  border-bottom: solid 4px #990000;
+  border-radius: 3px;
+  color: #FCFCFC;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+.button:active {
+  -webkit-transform: translateY(4px);
+  border-bottom: none;
+  transform: translateY(4px);
+}
+
+#resetbtn {
+  margin-left: 1rem;
+}
+
+#preview {
+  word-wrap: break-word;
+  background-color: #fff5f5;
+  min-height: 250px;
+  padding: 20px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.floating {
+  bottom: 50px;
+  display: none;
+  opacity: 0.6;
+  position: fixed;
+  right: 28px;
+  z-index: 30;
+}
+
+.floating:hover {
+  opacity: 0.9;
+  transition: all 0.3s ease 0s;
+}
+
+.floating a {
+  background: #ff6666;
+  border-radius: 50%;
+  color: #FCFCFC;
+  display: block;
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
+}
+
+#footer {
+  background-color: #fff0f0;
+}
+
+#footer .inner {
+  padding: 20px 0;
+}
+
+#footer a {
+  color: #337ab7;
+  font-weight: bold;
+}
+
+#footer a:hover {
+  color: #23527c;
+  text-decoration: underline;
+  transition: all 0.3s ease 0s;
+}
+
+.copyright {
+  text-align: center;
+}
+
+#header {
+  background-color: #fff0f0;
+}
+
+#header .inner {
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header-logo {
+    font-size: 1.5em;
+    margin: 0 auto;
+  }
+  .contents-title {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .inner {
+    padding: 40px 32px;
+  }
+}

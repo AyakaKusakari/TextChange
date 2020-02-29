@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>「テキスト → HTML」変換ツール</title>
+    
+    <meta name="description" content="テキストをHTMLに変換するWeb制作支援ツールです" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <header id="header">
+
+        <div class="inner">
+            <h1 class="header-logo">「テキスト → HTML」変換ツール</h1>
+        </div>
+
+    </header>
+
+    <div id="contents">
+        <div class="inner">
+
+            <div class="text-area">
+
+                <p>メモ帳やWord、Googleドキュメントで作成した文章を、HTMLテキストに変換するツールです。</p>
+                <p>変換したいテキストを貼り付けると、自動変換されます。</p>
+                <p>「結果をコピー」を押すとコピーされ、「リセット」を押すと入力したテキストがリセットされます。</p>
+                <p>※変換前のテキストの改行は&lt;br&gt;タグを付与せず保持されます。</p>
+
+            </div><!-- /top-txt -->
+
+
+            <div class="textchange">
+            
+                <h2 class="contents-title">変換したいテキスト</h2>
+
+                <textarea name="rawtext" id="rawtext" placeholder="ここに変換したいテキストを貼り付けてください。" onkeyup="countLength(value, 'textlength');"></textarea>
+                <p id="textlength">0文字</p>
+                    
+                <h2 class="contents-title">出力結果</h2>
+
+                <textarea name="result" id="result" placeholder="ここに結果が出力されます。" readonly></textarea>
+
+                <div class="btn-wrapper">
+                
+                    <button class="button" onclick="copy()" type="button">結果をコピー</button>
+                    <button class="button" id="resetbtn" onclick="reset()" type="button">リセット</button>
+                
+                </div>
+            
+                <h2 class="contents-title">プレビュー</h2>
+
+                <div id="preview"></div>
+
+            </div><!-- /textchange -->
+
+            <h2 class="contents-title">使い方</h2>
+            
+            <div class="text-area">
+          
+                <h3>文頭につける</h3>
+                <p>■：&lt;h2&gt;&lt;/h2&gt;タグに変換</p>
+                <p>□：&lt;h3&gt;&lt;/h3&gt;タグに変換</p>
+                <p>●：&lt;h4&gt;&lt;/h4&gt;タグに変換</p>
+                <p>＞：&lt;blockquote&gt;&lt;/blockquote&gt;タグに変換</p>
+
+                <h3>リストタグ</h3>
+                <p>◆：&lt;ul&gt;タグに変換</p>
+                <p>◇：&lt;/ul&gt;タグに変換</p>
+                <p>★：&lt;ol&gt;タグに変換</p>
+                <p>☆：&lt;/ol&gt;タグに変換</p>
+                <p>・：&lt;li&gt;&lt;/li&gt;タグに変換</p>
+                <p>【使用例】</p>
+                <p>◆</p>
+                <p>・リスト１</p>
+                <p>・リスト２</p>
+                <p>・リスト３</p>
+                <p>◇</p>
+
+                <h3>URL</h3>
+                <p>https://〜：&lt;a href="https://〜"&gt;https://〜&lt;/a&gt;タグに変換</p>
+
+                <h3>改行</h3>
+                <p>。/！/？：後ろに空の改行を追加</p>
+
+                <h3>全角から半角に変更</h3>
+                <p>全角数字：半角数字に変換</p>
+                <p>（全角かっこ）：(半角かっこ)に変換</p>
+
+            </div><!-- /text-area -->
+
+            <h2 class="contents-title">作成の経緯</h2>
+
+            <div class="text-area">
+
+                <p>私は、Webライターのお仕事をしています。</p>
+                <p>出来上がった記事を発注者さんに提出する際、記事作成のルールがあり、毎回編集するのを手間に感じていました。</p>
+                <p>そこで、Javascriptを使って一括変換できるツールを作成し、手間を省くことに成功しました。</p>
+
+            </div>
+
+        </div><!-- /inner -->
+    </div><!-- contents -->
+
+    <footer id="footer">
+        <div class="inner">
+
+            <p class="copyright">Copyright 2020 <a href="https://wayasblog.com" target="_blank">わやずぶろぐ</a> All Rights Reserved.</p>
+
+        </div><!-- /inner -->
+    </footer>
+
+    <div class="floating">
+        <a href="#"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/textchange.js"></script>
+
+</body>
+
+</html>

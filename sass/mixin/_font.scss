@@ -1,0 +1,51 @@
+@mixin  header-logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: $main-color;
+    text-align: center;
+    @include media('sp') {
+        font-size: 1.5em;
+        margin: 0 auto;
+    }
+}
+
+.header-logo {
+    @include header-logo;
+}
+
+@mixin contents-title {
+    font-size: 1.5em;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    @include media('sp') {
+        font-size: 1.4em;
+    }
+    padding: 0.25em 0.5em;
+    background: transparent;
+    border-left: solid 5px $main-color;
+}
+
+.contents-title {
+    @include contents-title;
+}
+
+h3 {
+    font-size: 1.2rem;
+    @include media('sp') {
+        font-size: 1.1em;
+    }
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.3rem;
+    line-height: 1.4;
+    &:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        position: absolute;
+        font-size: 1rem;
+        left: 0;
+        top: 0;
+        color: $main-color;
+    }
+}

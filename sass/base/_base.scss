@@ -1,0 +1,23 @@
+body {
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background-color: #FCFCFC;
+    color: #333333;
+    font-size: 16px;
+    @include media('sp') {
+        font-size: 14px;
+    }
+}
+
+.inner {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 80px 0;
+    width: 1100px;
+    @include media('tab') {
+        padding: 40px 32px;
+    }
+    @include media('sp') {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
