@@ -28,7 +28,7 @@ function formChange() {
             //blockquoteタグへ変換
             textChange = textChange.replace(/^＞ *(.+?)$/gm, "<blockquote>$1</blockquote>");
             //aタグへの変換
-            textChange = textChange.replace(/^http *(.+?)$/gm, '<a href="http$1">http$1</a>');
+            textChange = textChange.replace(/^http *(.+?)$/gm, '<a href="http$1">テキスト</a>');
             //改行の後に空の改行を追加
             textChange = textChange.replace(/。/gm, "。\n");
             textChange = textChange.replace(/！/gm, "！\n");
